@@ -44,7 +44,7 @@ const mechanism_work = [
 
 const Mechanism = () => {
   return (
-    <div className="secContainer fixed">
+    <div className="dark:bg-dark secContainer fixed">
       <div className={styles.shape_circle}>
         <Image
           className={`${styles.image} dark:opacity-10`}

@@ -63,7 +63,7 @@ const Content = [
 
 const ServiceContent = () => {
   return (
-    <div className="secContainer">
+    <div className="dark:bg-dark secContainer">
       <div className={styles.container}>
         <div className="conTitle">
           <span>ماذا نقدم ؟</span>

@@ -4,7 +4,7 @@ import Link from "next/link"
 import Image from "next/image"
 const Info = () => {
   return (
-    <div className="secContainer">
+    <div className="dark:bg-dark secContainer">
       <div className={styles.container}>
         <div className={styles.left_info}>
           <div className={styles.title}>

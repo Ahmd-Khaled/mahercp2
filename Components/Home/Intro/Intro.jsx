@@ -8,7 +8,7 @@ const Intro = () => {
 
   return (
     <>
-      <div className="secContainer">
+      <div className="dark:bg-dark secContainer">
         <div className={styles.container}>
           <div className={styles.intro}>
             <div className={styles.main_banner}>

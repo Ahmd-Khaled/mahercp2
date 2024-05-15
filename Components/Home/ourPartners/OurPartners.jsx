@@ -49,7 +49,7 @@ const OurPartners = () => {
     },
   }
   return (
-    <div className="secContainer">
+    <div className="dark:bg-dark secContainer">
       <div className={styles.container}>
         <div className={`${styles.Title} conTitle`}>
           <h2 className="dark:text-white">شركائنا فى النجاح</h2>

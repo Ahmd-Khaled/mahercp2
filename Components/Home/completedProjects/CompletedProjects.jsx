@@ -89,7 +89,7 @@ const CompletedProjects = () => {
 
   return (
     <section className={`${styles.section} color84`}>
-      <div className="secContainer">
+      <div className="dark:bg-dark secContainer">
         <div className={styles.container}>
           <div>
             <div className={`${styles.Title} conTitle`}>
