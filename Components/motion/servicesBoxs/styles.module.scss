@@ -1,0 +1,174 @@
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  .wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 40px;
+    @media (max-width: 991px) {
+      justify-content: space-between;
+    }
+    .item {
+      width: 25%;
+      padding-left: 30px;
+
+      @media (max-width: 991px) {
+        width: 33%;
+        padding-left: 10px;
+      }
+      @media (max-width: 768px) {
+        width: 50%;
+        padding-left: 20px;
+      }
+      @media (max-width: 639px) {
+        width: 100%;
+        padding-left: 0;
+      }
+      .services_box {
+        width: 100%;
+        flex: auto;
+        position: relative;
+        text-align: center;
+        margin-bottom: 30px !important;
+        overflow: hidden;
+
+        .services_img {
+          width: 100%;
+          border-radius: 5px 5px 0 0;
+          background: #fff;
+          height: 250px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+
+          .img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+
+        .content {
+          border-radius: 0 0 5px 5px;
+          background-color: #f6941d;
+          -webkit-transition: 0.5s;
+          transition: 0.5s;
+          padding-left: 30px;
+          padding-right: 30px;
+          padding-bottom: 30px;
+
+          .icon {
+            border: 2px solid #f6941d;
+            background-color: #ffffff;
+            color: #f6941d;
+            width: 65px;
+            height: 65px;
+            line-height: 75px;
+            border-radius: 50%;
+            position: relative;
+            top: -30px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 20px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .icon_service {
+              font-size: 30px;
+            }
+          }
+
+          h3 {
+            color: #ffffff;
+            margin-bottom: 0;
+            margin-top: -36px;
+            font-size: 19px;
+            font-weight: 700;
+          }
+        }
+
+        .content_hover {
+          border-radius: 5px;
+          background-color: #f6941d;
+          -webkit-transition: 0.5s;
+          transition: 0.5s;
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          width: 100%;
+          height: 45%;
+          opacity: 0;
+          visibility: hidden;
+
+          .d_table {
+            width: 100%;
+            display: table;
+            height: 100%;
+          }
+          .d_table_cell {
+            vertical-align: middle;
+            display: table-cell;
+          }
+
+          .inner {
+            padding: 10px;
+
+            .icon {
+              border: 2px solid #f6941d;
+              background-color: #ffffff;
+              color: #f6941d;
+              width: 65px;
+              height: 65px;
+              line-height: 75px;
+              border-radius: 50%;
+              margin-left: auto;
+              margin-right: auto;
+              margin-bottom: 20px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+
+              .icon_service {
+                font-size: 30px;
+              }
+            }
+
+            h3 {
+              color: #ffffff;
+              margin-bottom: 0;
+              font-size: 18px;
+              font-weight: 700;
+            }
+
+            p {
+              color: #ffffff;
+              margin-top: 10px;
+              font-size: 13px;
+            }
+
+            .arrow {
+              display: inline-block;
+              color: #ffffff;
+              position: relative;
+              z-index: 1;
+              font-size: 25px;
+              margin-top: 10px;
+            }
+          }
+        }
+
+        &:hover .content_hover {
+          opacity: 1;
+          visibility: visible;
+          height: 100%;
+        }
+      }
+    }
+  }
+}

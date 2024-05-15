@@ -1,0 +1,75 @@
+.container {
+  max-width: 1200px;
+  margin: auto;
+  .intro {
+    height: 530px;
+    position: relative;
+    z-index: 1;
+    background-image: url("/images/man2.png");
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: 500px;
+    background-position: 92% 120%;
+    background-position: 10% 120%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    @media only screen and (min-width: 768px) and (max-width: 991px) {
+      height: 100%;
+      background-position: left bottom;
+      padding-top: 200px;
+      padding-bottom: 540px;
+    }
+
+    @media only screen and (max-width: 767px) {
+      background-position: 10% 100%;
+      background-size: 50%;
+    }
+    @media only screen and (max-width: 375px) {
+      background-position: 10% 100%;
+      background-size: 60%;
+    }
+  }
+
+  .main_banner {
+    h1 {
+      position: relative;
+      z-index: 1;
+      padding: 8px 0;
+      margin: 0;
+      font-size: 35px;
+      font-weight: 700;
+      // font-family: cairo;
+
+      @media (max-width: 375px) {
+        font-size: 25px;
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 20px;
+        height: 100%;
+        z-index: -1;
+        background: $primary;
+      }
+    }
+
+    p {
+      margin-top: 10px;
+      margin-bottom: 10px;
+      width: 50%;
+      // color: #848484;
+      line-height: 1.9;
+      font-size: 15px;
+      // font-family: cairo;
+
+      @media only screen and (max-width: 991px) {
+        width: 100%;
+      }
+    }
+  }
+}

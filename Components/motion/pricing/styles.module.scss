@@ -1,0 +1,292 @@
+.section {
+  // background-color: #f9f9f9;
+  .container {
+    max-width: 1200px;
+    margin: auto;
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    .Title {
+      text-align: center;
+      margin-bottom: 40px;
+
+      span {
+        color: #848484;
+      }
+
+      .barbro {
+        margin: 20px auto 0;
+      }
+    }
+
+    .uk_grid {
+      display: flex;
+      flex-wrap: wrap;
+
+      .item {
+        width: 33%;
+        padding-left: 40px;
+
+        @media (max-width: 991px) {
+          padding-left: 30px;
+        }
+        @media (max-width: 960px) {
+          width: 50%;
+        }
+        @media (max-width: 639px) {
+          width: 100%;
+          padding-left: 0;
+        }
+        .single_pricing_box {
+          box-sizing: border-box;
+          width: 100%;
+          flex: auto;
+          position: relative;
+          z-index: 1;
+          text-align: center;
+          border-radius: 5px;
+          // background-color: #ffffff;
+          padding: 40px 0;
+          margin-top: 25px;
+        }
+        .single_pricing_box_active {
+          position: relative;
+          background: $primary;
+          height: auto;
+          color: #fff;
+          transform: scale(1.1);
+
+          @media (max-width: 960px) {
+            transform: scale(1);
+          }
+          .circles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1;
+            padding-left: 30px;
+
+            li {
+              position: absolute;
+              display: block;
+              list-style: none;
+              width: 10px;
+              height: 10px;
+              background: rgba(255, 255, 255, 0.2);
+              animation: animate 25s linear infinite;
+              bottom: -50px;
+            }
+
+            @keyframes animate {
+              0% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 1;
+                border-radius: 0;
+              }
+              100% {
+                transform: translateY(-1000px) rotate(720deg);
+                opacity: 0;
+                border-radius: 50%;
+              }
+            }
+            li:nth-child(1) {
+              left: 25%;
+              animation-delay: 0s;
+            }
+            li:nth-child(2) {
+              left: 10%;
+              width: 15px;
+              height: 15px;
+              animation-delay: 2s;
+              animation-duration: 12s;
+            }
+
+            li:nth-child(3) {
+              left: 70%;
+              width: 20px;
+              height: 20px;
+              animation-delay: 4s;
+            }
+            li:nth-child(4) {
+              left: 40%;
+              animation-delay: 0s;
+              animation-duration: 18s;
+            }
+            li:nth-child(5) {
+              left: 65%;
+              width: 13px;
+              height: 13px;
+              animation-delay: 0s;
+            }
+            li:nth-child(6) {
+              left: 75%;
+              width: 20px;
+              height: 20px;
+              animation-delay: 3s;
+            }
+
+            li:nth-child(7) {
+              left: 35%;
+              animation-delay: 7s;
+            }
+            li:nth-child(8) {
+              left: 50%;
+              animation-delay: 15s;
+              animation-duration: 45s;
+            }
+            li:nth-child(9) {
+              left: 20%;
+              width: 20px;
+              height: 20px;
+              animation-delay: 2s;
+              animation-duration: 35s;
+            }
+
+            li:nth-child(10) {
+              left: 85%;
+              animation-delay: 0s;
+              animation-duration: 11s;
+            }
+          }
+
+          .price {
+            color: #fff;
+            span {
+              color: #fff;
+            }
+          }
+          .pricing_des {
+            p {
+              color: #fff;
+            }
+          }
+
+          .pricing_features {
+            ul li {
+              color: #fff;
+            }
+          }
+
+          .contact {
+            margin-top: 22px;
+            padding: 11px 35px;
+            background: #fff;
+            color: $primary;
+
+            text-transform: capitalize;
+            z-index: 1;
+            font-size: 15px;
+            font-weight: 600;
+          }
+        }
+
+        .pricing_header {
+          text-align: center;
+
+          h3 {
+            margin: 0;
+            margin-bottom: 5px;
+            /* background-color: #f9f9f9; */
+            font-size: 20px;
+            font-weight: 600;
+          }
+        }
+
+        .price {
+          color: #f6941d;
+          font-size: 45px;
+          font-weight: 700;
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: end;
+
+          span {
+            display: block;
+            color: #59585f;
+            margin-top: 0;
+            font-size: 13px;
+            font-weight: 500;
+          }
+        }
+        .pricing_des {
+          text-align: center;
+
+          p {
+            font-size: 14px;
+            line-height: 22px;
+            width: 80%;
+            margin: 20px auto;
+            color: #848484;
+          }
+        }
+
+        .pricing_features {
+          margin-bottom: 10px;
+
+          ul {
+            padding: 0;
+            margin-bottom: 0;
+            list-style-type: none;
+
+            li {
+              margin-bottom: 10px;
+              color: #59585f;
+              font-size: 15px;
+              font-weight: 500;
+            }
+          }
+        }
+
+        .contact {
+          margin-top: 22px;
+          padding: 11px 35px;
+        }
+      }
+    }
+  }
+}
+
+.br_line {
+  position: relative;
+  overflow: hidden;
+  height: 60px;
+  width: 3px;
+  background: #f6941d;
+  right: 0;
+  left: 0;
+  margin: 0 auto;
+  z-index: 1;
+  overflow: hidden;
+  top: 30px;
+
+  &::after,
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    background: black;
+    animation: moveY 2s infinite linear;
+  }
+
+  &::after {
+    height: 4px;
+    top: 10px;
+  }
+  &::before {
+    height: 4px;
+    top: 20px;
+  }
+
+  @keyframes moveY {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(50px);
+    }
+  }
+}

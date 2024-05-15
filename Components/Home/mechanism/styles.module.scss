@@ -1,0 +1,137 @@
+.shape_circle {
+  width: fit-content;
+  position: absolute;
+  right: -8px;
+  top: -50%;
+  animation: movebounce 5s infinite linear;
+
+  @keyframes movebounce {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  @media (max-width: 1199px) {
+    display: none;
+  }
+}
+
+.container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  position: relative;
+  z-index: 1;
+
+  .Title {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 40px;
+
+    h2 {
+      @media (max-width: 386px) {
+        font-size: 25px;
+      }
+      @media (max-width: 323px) {
+        font-size: 22px;
+      }
+    }
+  }
+
+  .arrow {
+    position: relative;
+    left: -140px;
+    top: 82px;
+
+    .arrowImg {
+      width: 85%;
+      height: 100%;
+    }
+
+    @media (max-width: 991px) {
+      display: none;
+    }
+  }
+
+  .uk_grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(245px, 1fr));
+    grid-template-rows: auto;
+
+    @media (max-width: 1054px) {
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+    @media (max-width: 971px) {
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+    .item {
+      text-align: center;
+      margin-left: 20px;
+
+      @media (max-width: 971px) {
+        margin-bottom: 20px;
+      }
+      .single_process {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+        .icon {
+          border: 4px solid #eeeeee;
+          width: 75px;
+          height: 75px;
+          color: #ffffff;
+          border-radius: 50%;
+          margin-bottom: 20px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          margin-left: auto;
+          margin-right: auto;
+          z-index: 1;
+
+          .uk_icon {
+            font-size: 35px;
+          }
+        }
+
+        .content_process {
+          h3 {
+            line-height: 1.4;
+            // color: black;
+            margin: 0;
+            font-size: 22px;
+            font-weight: 700;
+          }
+          span {
+            // color: #848484;
+            line-height: 1.9;
+            margin-top: 7px;
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.itemWithMargin {
+  margin-top: 40px;
+
+  @media (max-width: 971px) {
+    margin: 0;
+  }
+}

@@ -1,0 +1,39 @@
+.br_line {
+  position: relative;
+  overflow: hidden;
+  height: 60px;
+  width: 3px;
+  background: #f6941d;
+  right: 0;
+  left: 0;
+  margin: 0 auto;
+  z-index: 1;
+  overflow: hidden;
+
+  &::after,
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    background: #fff;
+    animation: moveY 2s infinite linear;
+  }
+
+  &::after {
+    height: 4px;
+    top: 10px;
+  }
+  &::before {
+    height: 4px;
+    top: 20px;
+  }
+
+  @keyframes moveY {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(50px);
+    }
+  }
+}

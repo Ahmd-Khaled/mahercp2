@@ -1,0 +1,61 @@
+.filterCVs {
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    @media (max-width: $lg-media) {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .filterBtn {
+        height: 55px;
+        border: 1px solid $black11;
+        // color: $black66;
+        background-color: $black11;
+        @include borderRadius(6px);
+        @include transition(0.3s);
+        padding: 8px 16px;
+        svg {
+            @include transition(0.3s);
+            font-size: 24px;
+            color: $gray-C1;
+        }
+        &:hover {
+            border-color: $primary;
+            svg {
+                color: $primary;
+            }
+        }
+    }
+    .searchBox {
+        height: 55px;
+        width: 250px;
+        border: 1px solid $black19;
+        background-color: $black19;
+        @include borderRadius(6px);
+        @include transition(0.5s);
+        padding: 0px 4px 8px;
+        display: flex;
+        align-items: center;
+        &:hover {
+            width: 350px;
+        }
+        @media (max-width: $lg-media) {
+            width: 282px;
+            &:hover {
+                width: 350px;
+            }
+        }
+        @media (max-width: $sm-media) {
+            // width: 250px;
+            &:hover {
+                width: 100%;
+            }
+        }
+        input {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+    }
+}

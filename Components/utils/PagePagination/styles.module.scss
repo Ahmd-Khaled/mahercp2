@@ -1,0 +1,121 @@
+.pagePagination {
+  margin-bottom: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @media (max-width: $xs-media) {
+    justify-content: center;
+  }
+  .container {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    @media (max-width: $xs-media) {
+      flex-direction: column;
+      gap: 16px;
+    }
+    .selectNumPerPage {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 4px;
+      width: 125px;
+      height: 40px;
+      border: 1px solid $gray-DE;
+      @include borderRadius(4px);
+      background-color: $white;
+      padding: 8px 8px 8px 16px;
+      border: 1px solid $black11;
+      // color: $black66;
+      background-color: $black11;
+      @include borderRadius(6px);
+      cursor: pointer;
+
+      .text {
+        color: $black46;
+        // font-family: Inter;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+      .dropIcon {
+        fill: $gray-8B;
+      }
+      @include transition(0.2s);
+      &:hover {
+        border-color: $yellow-FF9;
+        .text,
+        .dropIcon {
+            color: $yellow-FF9;
+            fill:  $yellow-FF9;
+        }
+      }
+    }
+    .pages {
+      display: flex;
+      align-items: center;
+      .next,
+      .prev,
+      .num,
+      .numActive {
+        width: 44px;
+        height: 40px;
+        background-color: $white;
+        border: 1px solid $gray-DE;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @include transition(0.2s);
+        border: 1px solid $black11;
+        color: $white;
+        background-color: $black11;
+        svg {
+          color: $black46;
+            @include transition(0.2s);
+        }
+        &:hover {
+          border-color: $yellow-FF9;
+          color: $yellow-FF9;
+          svg {
+            color: $yellow-FF9;
+          }
+        }
+      }
+      .next {
+        @include borderRadius(0px 4px 4px 0px);
+        .nextIcon {
+        }
+      }
+      .prev {
+        @include borderRadius(4px 0px 0px 4px);
+        .prevIcon {
+        }
+      }
+      .num,
+      .numActive {
+        display: block;
+        @include borderRadius(0px);
+        color: $black1C;
+        color: $black46;
+        text-align: center;
+        // font-feature-settings: 'clig' off, 'liga' off;
+        // font-family: Inter;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        @include transition(0.2s);
+        &:hover {
+            // background-color: $gray-EF;
+            color: $yellow-FF9;
+        }
+      }
+      .numActive {
+        background-color: $black11;
+        color: $yellow-FF9;
+        font-weight: bold;
+      }
+    }
+  }
+}
